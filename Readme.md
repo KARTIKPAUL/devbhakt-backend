@@ -1,6 +1,6 @@
-# DevBhakt — Backend API
+# Kartikeyo — Backend API
 
-Node.js + Express + MongoDB backend for the DevBhakt devotional clothing & lifestyle store. Supports product catalog browsing, cart-to-order checkout with Razorpay online payments and Cash on Delivery, JWT auth, admin product/order management, and transactional email.
+Node.js + Express + MongoDB backend for the Kartikeyo devotional clothing & lifestyle store. Supports product catalog browsing, cart-to-order checkout with Razorpay online payments and Cash on Delivery, JWT auth, admin product/order management, and transactional email.
 
 ## Tech Stack
 
@@ -14,7 +14,7 @@ Node.js + Express + MongoDB backend for the DevBhakt devotional clothing & lifes
 ## Project Structure
 
 ```
-devbhakt-backend/
+Kartikeyo-backend/
 ├── config/
 │   ├── db.js            # MongoDB connection
 │   ├── cloudinary.js    # Cloudinary + multer upload config
@@ -57,7 +57,7 @@ npm run dev
 Create your first admin account (there's no public sign-up-as-admin route, by design):
 
 ```bash
-npm run seed:admin -- "Admin Name" admin@devbhakt.com aSecurePassword
+npm run seed:admin -- "Admin Name" admin@Kartikeyo.com aSecurePassword
 ```
 
 ## Environment Variables
@@ -128,10 +128,10 @@ Base URL: `http://localhost:5000`
 
 | Method | Route | Auth | Description |
 |---|---|---|---|
-| POST | `/create-order/:orderId` | user | Creates a Razorpay order for an existing `ONLINE` DevBhakt order |
+| POST | `/create-order/:orderId` | user | Creates a Razorpay order for an existing `ONLINE` Kartikeyo order |
 | POST | `/verify` | user | Verifies Razorpay's signature server-side and marks the order paid |
 
-Frontend flow: create the DevBhakt order → call `create-order` to get a Razorpay order id → open Razorpay Checkout → on success, POST the returned `razorpay_order_id` / `razorpay_payment_id` / `razorpay_signature` to `/verify`. The order is only marked paid after the signature check passes here — the frontend's own "success" callback is never trusted.
+Frontend flow: create the Kartikeyo order → call `create-order` to get a Razorpay order id → open Razorpay Checkout → on success, POST the returned `razorpay_order_id` / `razorpay_payment_id` / `razorpay_signature` to `/verify`. The order is only marked paid after the signature check passes here — the frontend's own "success" callback is never trusted.
 
 ## Design Notes
 

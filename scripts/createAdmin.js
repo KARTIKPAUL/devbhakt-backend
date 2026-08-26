@@ -1,4 +1,4 @@
-// Usage: node scripts/createAdmin.js "Admin Name" admin@devbhakt.com yourSecurePassword
+// Usage: node scripts/createAdmin.js "Admin Name" admin@Kartikeyo.com yourSecurePassword
 import "dotenv/config";
 import mongoose from "mongoose";
 import User from "../models/User.js";
@@ -7,7 +7,7 @@ const run = async () => {
   const [, , name, email, password] = process.argv;
 
   if (!name || !email || !password) {
-    console.log('Usage: node scripts/createAdmin.js "Admin Name" admin@devbhakt.com yourSecurePassword');
+    console.log('Usage: node scripts/createAdmin.js "Admin Name" admin@Kartikeyo.com yourSecurePassword');
     process.exit(1);
   }
 

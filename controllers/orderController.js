@@ -91,7 +91,7 @@ export const createOrder = asyncHandler(async (req, res) => {
 
     sendEmail({
       to: req.user.email,
-      subject: `DevBhakt order confirmed — #${order._id}`,
+      subject: `Kartikeyo order confirmed — #${order._id}`,
       html: orderConfirmationTemplate(order),
     });
   }

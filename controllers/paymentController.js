@@ -18,7 +18,7 @@ const getRazorpayInstance = () => {
   });
 };
 
-// @desc    Create a Razorpay order tied to an existing DevBhakt order
+// @desc    Create a Razorpay order tied to an existing Kartikeyo order
 // @route   POST /api/payment/create-order/:orderId
 export const createRazorpayOrder = asyncHandler(async (req, res) => {
   const order = await Order.findById(req.params.orderId);
@@ -111,7 +111,7 @@ export const verifyRazorpayPayment = asyncHandler(async (req, res) => {
 
     sendEmail({
       to: req.user.email,
-      subject: `DevBhakt order confirmed — #${order._id}`,
+      subject: `Kartikeyo order confirmed — #${order._id}`,
       html: orderConfirmationTemplate(order),
     });
   }

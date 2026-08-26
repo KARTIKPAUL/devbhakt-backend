@@ -18,7 +18,7 @@ cloudinary.config({
 const storage = new CloudinaryStorage({
   cloudinary,
   params: {
-    folder: "devbhakt-photos",
+    folder: "kartikeyo-photos",
     allowed_formats: ["jpg", "jpeg", "png", "webp"],
     transformation: [
       {

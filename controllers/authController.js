@@ -25,7 +25,7 @@ export const registerUser = asyncHandler(async (req, res) => {
 
   sendEmail({
     to: user.email,
-    subject: "Welcome to DevBhakt",
+    subject: "Welcome to Kartikeyo",
     html: welcomeEmailTemplate(user.name),
   });
 
@@ -145,7 +145,7 @@ export const forgotPassword = asyncHandler(async (req, res) => {
 
   await sendEmail({
     to: user.email,
-    subject: "Reset your DevBhakt password",
+    subject: "Reset your Kartikeyo password",
     html: passwordResetTemplate(resetUrl),
   });
 
