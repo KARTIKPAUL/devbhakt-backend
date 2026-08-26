@@ -17,7 +17,7 @@ app.use(cors());
 app.use(express.json());
 
 app.get("/", (req, res) => {
-  res.send("DevBhakt API is running");
+  res.send("Kartikeyo API is running");
 });
 
 app.get("/api/health", (req, res) => {

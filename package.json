@@ -1,7 +1,7 @@
 {
-  "name": "devbhakt-backend",
+  "name": "kartikeyo-backend",
   "version": "1.0.0",
-  "description": "DevBhakt e-commerce backend — Express, MongoDB, Razorpay, Cloudinary",
+  "description": "kartikeyo e-commerce backend — Express, MongoDB, Razorpay, Cloudinary",
   "type": "module",
   "main": "index.js",
   "scripts": {
@@ -10,7 +10,7 @@
     "build": "node --check index.js",
     "seed:admin": "node scripts/createAdmin.js"
   },
-  "author": "DevBhakt",
+  "author": "kartikeyo",
   "license": "MIT",
   "dependencies": {
     "bcryptjs": "^3.0.3",
